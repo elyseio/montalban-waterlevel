@@ -18,9 +18,10 @@ except ValueError:
 
 # Filter for Montalban
 montalban_data = data[4]
+water_level = montalban_data.get('wl').replace('(*)', '')
 
 if montalban_data:
-    print(f"Montalban Water Level : {montalban_data.get('wl')}m")
+    print(f"Montalban Water Level : {water_level}")
 else:
     print("[INFO] Montalban station not found in the response.")
 
