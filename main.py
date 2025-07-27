@@ -16,7 +16,7 @@ except ValueError:
     print("[ERROR] Response is not valid JSON.")
     exit()
 
-# Filter for Montalban station by ID or name
+# Filter for Montalban
 montalban_data = data[4]
 
 if montalban_data:
