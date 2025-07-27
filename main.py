@@ -3,14 +3,8 @@ from curl_cffi import requests
 # XHR
 url = 'https://pasig-marikina-tullahanffws.pagasa.dost.gov.ph/water/table_list.do'
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-    'X-Requested-With': 'XMLHttpRequest',
-    'Accept': 'application/json',
-}
-
 try:
-    resp = requests.post(url, headers=headers, impersonate='chrome', timeout=10)
+    resp = requests.post(url, impersonate='chrome', timeout=10)
     resp.raise_for_status()
 except requests.exceptions.RequestException as e:
     print(f"[ERROR] Failed to fetch data: {e}")
